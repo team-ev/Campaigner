@@ -29,7 +29,7 @@ class CampaignerClient
 	protected function initSoap($url)
 	{
 		// $url = 'https://ws.campaigner.com/2013/01/contactmanagement.asmx?WSDL';   	   
-		$this->soapClient = new SoapClient($url, [
+		$this->soapClient = new \SoapClient($url, [
 			'exceptions' => false,
 			'compression'=> SOAP_COMPRESSION_ACCEPT | SOAP_COMPRESSION_GZIP,
 			'soap_version'=> 'SOAP_1_1',
